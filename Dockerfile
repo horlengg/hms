@@ -1,15 +1,11 @@
-#
-# Build stage
-#
-FROM gradle:jdk17-jammy AS build
-COPY --chown=gradle:gradle . /home/gradle/src
+# Use the official Gradle image as a build stage
+FROM gradle:latest AS build
+COPY . /home/gradle/src
 WORKDIR /home/gradle/src
 RUN gradle build --no-daemon
 
-LABEL org.name="hezf"
-#
-# Package stage
-#
-FROM eclipse-temurin:17-jdk-jammy
-COPY --from=build /home/gradle/src/build/libs/docker-0.0.1-SNAPSHOT.jar app.jar
-ENTRYPOINT ["java","-jar","/app.jar"]
+# Use the official OpenJDK image as a runtime stage
+FROM openjdk:17.0.1-jdk-slim
+COPY --from=build /home/gradle/src/build/libs/demo-0.0.1-SNAPSHOT.jar demo.jar
+EXPOSE 8080
+ENTRYPOINT ["java", "-jar", "demo.jar"]
