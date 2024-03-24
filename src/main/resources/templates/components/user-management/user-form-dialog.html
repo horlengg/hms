@@ -1,0 +1,81 @@
+<div class="app_dialog app_dialog_overlay" data-target="user_form">
+    <div class="dialog_conatainer">
+        <div class="dialog_header">
+            <h4 class="text-lg font-semibold">Create User</h4>
+        </div>
+        <div class="dialog_content min-w-[500px] overflow-x-auto max-h-[500px]">
+            <form class="max-w-md mx-auto mt-3" action="/user/create" modelAttribute="userDTO" method="post">
+                <div class="grid md:grid-cols-2 md:gap-6">
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input
+                            type="text"
+                            id="floating_first_name"
+                            name="firstName"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" "
+                            required />
+                        <label
+                            for="floating_first_name"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                            First name
+                        </label>
+                    </div>
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input
+                            type="text"
+                            id="floating_last_name"
+                            name="lastName"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" "
+                            required />
+                        <label
+                            for="floating_last_name"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                            Last name
+                        </label>
+                    </div>
+                </div>
+                <div class="grid md:grid-cols-2 md:gap-6">
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input
+                            type="text"
+                            id="user_email"
+                            name="email"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" "
+                            required />
+                        <label
+                            for="user_email"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                            Email
+                        </label>
+                    </div>
+                    <div class="relative z-0 w-full mb-5 group">
+                        <input
+                            type="text"
+                            id="user_phone"
+                            name="phoneNumber"
+                            class="block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none focus:outline-none focus:ring-0 focus:border-blue-600 peer"
+                            placeholder=" "
+                            required />
+                        <label
+                            for="user_phone"
+                            class="peer-focus:font-medium absolute text-sm text-gray-500 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:start-0 rtl:peer-focus:translate-x-1/4 peer-focus:text-blue-600 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6">
+                            Phone number
+                        </label>
+                    </div>
+                </div>
+                <div class="flex justify-end items-center gap-5">
+                    <button  arial-target="user_form" class="dialog_btn_closer text-white bg-red-500 hover:bg-red-600 focus:ring-2 focus:ring-red-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none">
+                        Close
+                    </button>
+                    <button type="submit" class="text-white bg-blue-700 hover:bg-blue-800 focus:ring-2 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 me-2 mb-2 focus:outline-none">
+                        Submit
+                    </button>
+                </div>
+                </form>
+            </div>
+            <!-- <div class="dialog_footer flex justify-end items-center"> </div> -->
+        </div>
+    </div>
+</div>

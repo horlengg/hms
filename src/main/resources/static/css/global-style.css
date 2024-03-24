@@ -1,0 +1,129 @@
+
+
+.hms_template {
+    padding: 20px;
+    border-radius: 12px;
+}
+.hms_template:not(.blank_template) {
+    background-color: var(--white);
+}
+table.app_table {
+    border-collapse: collapse;
+}
+table.app_table tbody tr:nth-child(odd){
+    background-color: gray;
+}
+table.app_table td,
+table.app_table th {
+    padding: 20px;
+    border-bottom: 1px solid gray;
+}
+
+button.app_btn {
+    height: 40px;
+    outline: none;
+    cursor: pointer;
+    transition: opacity .3s ease-in-out;
+}
+button.app_btn:not(.btn_cycle) {
+    border-radius: 12px;
+    padding: 0 20px;
+}
+button.app_btn.btn-primary {
+    border: none;
+    background-color: var(--primary-color);
+    color: #FFF;
+}
+button.app_btn.btn_primary:hover {
+    opacity: .9;
+}
+
+button.btn_cycle {
+    border-radius: 50%;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+button.btn_cycle.small {
+    width: 30px;
+    height: 30px;
+}
+button.btn_cycle.meduim {
+    width: 35px;
+    height: 35px;
+}
+button.btn_cycle.large {
+    width: 40px;
+    height: 40px;
+}
+button.btn_outline {
+    background-color: initial;
+}
+button.btn_text {
+    background-color: initial;
+    border: none;
+}
+button.btn_text:hover {
+    background-color: var(--active-color);
+}
+button.btn_cycle .btn_icon {
+    width: 60%;
+}
+
+.txt-xs {
+    font-size: 12px;
+}
+.txt-sm {
+    font-size: 14px;
+}
+.txt-md {
+    font-size: 16px;
+}
+.txt-lg {
+    font-size: 18px;
+}
+.txt-xl {
+    font-size: 22px;
+}
+.txt-2xl {
+    font-size: 25px;
+}
+.mt-8px {
+    margin-top: 8px;
+}
+.mt-5px {
+    margin-top: 8px;
+}
+
+.app_dialog_overlay {
+    background-color: rgba(220, 236, 255, .5);
+    position: fixed;
+    inset: 0;
+    display: none;
+    place-content: center;
+    z-index: 1000;
+}
+.app_dialog_overlay.show_dialog {
+    display: grid;
+}
+.app_dialog_overlay .dialog_conatainer {
+    min-width: 200px;
+    background-color: #FFF;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 20px 20px 60px #cbd7e8, -20px -20px 60px #dee8f5;
+}
+.app_dialog_overlay .dialog_conatainer .dialog_header {
+    padding: 1.5rem;
+}
+.app_dialog_overlay .dialog_conatainer .dialog_content,
+.app_dialog_overlay .dialog_conatainer .dialog_footer {
+    padding: 0 1.5rem 1.5rem 1.5rem;
+}
+.app_dialog_overlay .dialog_conatainer .dialog_footer {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}

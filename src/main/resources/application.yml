@@ -1,0 +1,15 @@
+spring :
+    datasource:
+        url: jdbc:postgresql://localhost:5432/db_hms
+        username: postgres
+        password: leng01
+        driver-class-name: org.postgresql.Driver
+    jpa:
+        database-platform: org.hibernate.dialect.PostgreSQLDialect
+        hibernate :
+            ddl-auto: update
+    thymeleaf:
+        prefix: classpath:/templates/
+        suffix : .html
+    # hms :
+    #     defaultPassword : "hms@0101"

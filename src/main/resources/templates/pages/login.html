@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HMS SYSTEM</title>
+    <link rel="shortcut icon" th:href="@{/images/hms_fav-icon.jpg}" type="image/x-icon">
+    <link rel="stylesheet" th:href="@{/css/login.css}" type="text/css">
+    <link rel="stylesheet"  th:href="@{/css/global-style.css}">
+</head>
+
+<body>
+    <div id="app_login_bg">
+        <video id="apd_bg" autoplay muted loop>
+            <source th:src="@{/videos/sea-video.mp4}" type="video/mp4">
+        </video>
+    </div>
+    <div class="login_wrapper">
+        <div class="form_login">
+            <h4>Welcome to <span>HMS SYSTEM !.</span></h4>
+            <form method="post" role="form" th:action="@{/auth/login}">
+                <div class="form_col mt-5">
+                    <label for="username">Email</label>
+                    <input type="text" id="username" name="username" class="app_input_box" placeholder="email" required>
+                </div>
+                <div class="form_col mt-5">
+                    <label for="username">Password</label>
+                    <input type="password" id="password" name="password" class="app_input_box" placeholder="password" required>
+                </div>
+                <div class="mt-5 btn_sign_wrapper">
+                    <button type="submit" class="app_btn btn-primary" value="Log in">Sign In</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
